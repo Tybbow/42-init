@@ -1,0 +1,10 @@
+#!/bin/bash
+#myFile ~/updater.sh
+
+apt-get update >> /var/log/update_script.log
+apt-get -y dist-upgrade >> /var/log/update_script.log
+apt-get autoclean >> /var/log/update_script.log
+apt-get autoremove --purge >> /var/log/update_script.log
+
+# 0  4    * * 1   root    sh ~/updater.sh
+

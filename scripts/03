@@ -1,0 +1,2 @@
+#!/bin/bash
+du -skh $1/* | sort -rn
